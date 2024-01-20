@@ -15,6 +15,8 @@ use Filament\Infolists\Infolist;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Support\Colors\Color;
+use Filament\Support\Enums\FontWeight;
+use Filament\Tables\Actions\ImportAction as ActionsImportAction;
 use Filament\Tables\Table;
 use Konnco\FilamentImport\Actions\ImportAction;
 use Konnco\FilamentImport\Actions\ImportField;
@@ -29,11 +31,11 @@ class ListEmployees extends ListRecords
     protected function getActions(): array
     {
         return [
-
+            
             Action::make('import')
                 ->hidden(!auth()->user()->hasPermissionTo('Employee Profiles'))
                 ->icon('heroicon-o-arrow-down-tray')
-                ->color(Color::Red)
+                ->color('gray')
                 ->url(fn (): string => route('filament.admin.resources.employees.import')),
             Action::make('Add Employee')
             ->modalHeading('Add New Employee')
