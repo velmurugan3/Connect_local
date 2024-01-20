@@ -1,5 +1,4 @@
 <div class=" w-full">
-    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     <div class=" w-full">
         <div @click="open = true" class=" flex justify-end">
             <button class=" text-sm text-[#287D3C] bg-[#D3F3DF] border border-[#287D3C] rounded px-1 active-btn">Active</button>
